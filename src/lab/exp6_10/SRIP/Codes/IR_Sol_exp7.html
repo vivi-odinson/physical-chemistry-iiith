@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>IR_Sol_exp7</title>
+    <link href="layout.css" rel="stylesheet" type="text/css"></link>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="jquery.min.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="fabric.min.js"
+    ></script>
+  </head>
+  <body>
+    <canvas id="c" width="800" height="600"></canvas>
+
+    <script>
+      var canvas = new fabric.Canvas("c");
+
+      var rect = new fabric.Rect({
+        left: 100,
+        top: 150,
+        fill: "red",
+        width: 200,
+        height: 200
+      });
+
+      canvas.add(rect);
+    </script>
+  </body>
+</html>
