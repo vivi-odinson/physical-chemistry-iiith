@@ -10,15 +10,30 @@
 
      <div id= "polygonsheet"></div>  
       <script>
-          var draw = SVG("polygonsheet").size(500, 500);
-                var poly = draw.polygon([
-                      [60, 20],
-                      [100,20],
-                      [100,100],
-                      [60, 100]
-                    ]).fill('none'). stroke({width: 1})
+        var draw = SVG("polygonsheet").size(500, 500);
 
-                var poly = draw.polygon([
+              var poly = draw.polygon([
+                [60, 20],
+                [100,20],
+                [100,100],
+                [60, 100]
+              ]).fill('#fffc00'). stroke({width: 1})
+
+              var poly = draw.polygon([
+                [60, 160],
+                [90,160],
+                [90,225],
+                [60, 225]
+              ]).fill('none'). stroke({width: 1})
+
+              var poly = draw.polygon([
+                [150, 20],
+                [220,20],
+                [220,130],
+                [150, 130]
+              ]).fill('none'). stroke({width: 1}) 
+
+              var poly = draw.polygon([
                       [60, 160],
                       [90,160],
                       [90,225],
