@@ -3,32 +3,35 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>IR_Sol_exp7</title>
     <link href="layout.css" rel="stylesheet" type="text/css"></link>
-    <script
-      language="javascript"
-      type="text/javascript"
-      src="jquery.min.js"
-    ></script>
-    <script
-      language="javascript"
-      type="text/javascript"
-      src="fabric.min.js"
-    ></script>
-  </head>
-  <body>
-    <canvas id="c" width="800" height="600"></canvas>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.7.1/svg.js"></script>
+   <body>
 
-    <script>
-      var canvas = new fabric.Canvas("c");
+     <div id= "polygonsheet"></div>  
+      <script>
+          var draw = SVG("polygonsheet").size(500, 500);
+                var poly = draw.polygon([
+                      [60, 20],
+                      [100,20],
+                      [100,100],
+                      [60, 100]
+                    ]).fill('none'). stroke({width: 1})
 
-      var rect = new fabric.Rect({
-        left: 100,
-        top: 150,
-        fill: "red",
-        width: 200,
-        height: 200
-      });
+                var poly = draw.polygon([
+                      [60, 160],
+                      [90,160],
+                      [90,225],
+                      [60, 225]
+                    ]).fill('none'). stroke({width: 1})
 
-      canvas.add(rect);
-    </script>
+                var poly = draw.polygon([
+                       [150, 20],
+                       [220,20],
+                       [220,130],
+                       [150, 130]
+                    ]).fill('none'). stroke({width: 1})
+
+     </script>
   </body>
 </html>
