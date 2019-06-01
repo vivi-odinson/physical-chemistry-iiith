@@ -7,10 +7,10 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.7.1/svg.js"></script>
    <body>
-
+      <div id= "drawing"></div>  
      <div id= "polygonsheet"></div>  
       <script>
-       var draw = SVG("polygonsheet").size(500, 500);
+     var draw = SVG("polygonsheet").size(500, 500);
 
 var poly = draw.polygon([
   [60, 20],
@@ -40,7 +40,7 @@ var poly = draw.polygon([
 })
 
 var polyline = draw.polyline([
-  [370, 110],
+ [370, 110],
   [360,120],
   [280, 120],
   [270,110],
@@ -48,11 +48,49 @@ var polyline = draw.polyline([
   [250,110],
   [230,80],
   [390,80],
-  [400,80]
+  [410,80]
   
-  
-
 ]).fill('none'). stroke({width:1})
+
+var polyline = draw.polyline([
+[390,110],
+[410,80]
+  
+]).fill('none'). stroke({width:1})
+
+var polyline = draw.polyline([
+[230,75],
+[410,75]
+  
+]).fill('none'). stroke({width:1})
+var polyline = draw.polyline([
+[230,70],
+[410,70]
+  
+]).fill('none'). stroke({width:1})
+var polyline = draw.polyline([
+[230,70],
+[230,80]
+  
+]).fill('none'). stroke({width:1})
+var polyline = draw.polyline([
+[410,70],
+[410,80]
+  
+]).fill('none'). stroke({width:1})
+
+var draw = SVG('drawing')
+
+var path = draw.path('M80 40  A2 2 0 1 0 500 50')
+path.fill('none').move(6, 5)
+path.stroke({
+  color: '#000000',
+  width: 1,
+  linecap: 'round',
+  linejoin: 'round'
+})
+
+
 
 
      </script>
