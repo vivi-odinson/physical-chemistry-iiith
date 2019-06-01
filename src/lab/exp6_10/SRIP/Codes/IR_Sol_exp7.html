@@ -1,14 +1,15 @@
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>IR_Sol_exp7</title>
     <link href="layout.css" rel="stylesheet" type="text/css"></link>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.7.1/svg.js"></script>
+  </head>
    <body>
-      <div id= "drawing"></div>  
-     <div id= "polygonsheet"></div>  
+  <div>
+     <div id= "polygonsheet"> </div>
       <script>
      var draw = SVG("polygonsheet").size(500, 500);
 
@@ -78,6 +79,14 @@ var polyline = draw.polyline([
 [410,80]
   
 ]).fill('none'). stroke({width:1})
+</script>
+</div>
+
+<div>
+     
+      <div id= "drawing"> </div>
+        <script>
+
 
 var draw = SVG('drawing')
 
@@ -90,9 +99,7 @@ path.stroke({
   linejoin: 'round'
 })
 
-
-
-
      </script>
+     </div>
   </body>
 </html>
