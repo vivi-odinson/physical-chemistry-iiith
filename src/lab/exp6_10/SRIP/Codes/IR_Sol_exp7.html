@@ -11,7 +11,7 @@
   <div>
      <div id= "polygonsheet"> </div>
       <script>
-     var draw = SVG("polygonsheet").size(500, 500);
+    var draw = SVG("polygonsheet").size(1000, 1000);
 
 var poly = draw.polygon([
   [60, 20],
@@ -28,6 +28,76 @@ var poly = draw.polygon([
   [90, 225],
   [60, 225]
 ]).fill('none').stroke({
+  width: 1
+})
+
+var poly = draw.polygon([
+  [580, 40],
+  [680, 40],
+  [680, 25],
+  [580, 25]
+]).fill('none').stroke({
+  width: 1
+})
+
+//slanty thing
+var poly = draw.polygon([
+  [630, 130], //point one
+  [610, 130], //point two
+  [610, 180], //point three
+  [630, 180]  //point four
+]).fill('none').stroke({
+  width: 1
+})
+
+//slanty thing's centre line
+var poly = draw.polygon([
+  [620, 130],
+  [620, 180]
+]).fill('none').stroke({
+  width: 1
+})
+
+//box below slanty box
+var poly = draw.polygon([
+  [635, 230], //point one
+  [600, 230], //point two
+  [600, 240], //point three
+  [635, 240]  //point four
+]).fill('none').stroke({
+  width: 1
+})
+
+//detector
+var poly = draw.polygon([
+  [635, 280], //point one
+  [600, 280], //point two
+  [600, 250], //point three
+  [635, 250]  //point four
+]).fill('none').stroke({
+  width: 1
+})
+
+var poly = draw.polygon([
+  [800, 120],
+  [950, 120]
+]).fill('none').stroke({
+  width: 0.8
+})
+
+var poly = draw.polygon([
+  [800, 200],
+  [950, 200]
+]).fill('none').stroke({
+  width: 1
+})
+
+var poly = draw.polygon([
+  [870, 110], //point one
+  [910, 110], //point two
+  [910, 210], //point three
+  [870, 210]  //point four
+]).fill('none').opacity({}).stroke({
   width: 1
 })
 
@@ -79,27 +149,24 @@ var polyline = draw.polyline([
 [410,80]
   
 ]).fill('none'). stroke({width:1})
-</script>
-</div>
 
-<div>
-     
-      <div id= "drawing"> </div>
-        <script>
+//var draw = SVG('drawing')
+
+//var path = draw.path('M150 30 A80 80 0 0 0  ')
+//path.fill('none').move(110, 140)
+//path.stroke({
+  //color: '#000000',
+  //width: 1,
+  //linecap: 'round',
+  //linejoin: 'round'
+//})
 
 
-var draw = SVG('drawing')
-
-var path = draw.path('M80 40  A2 2 0 1 0 500 50')
-path.fill('none').move(6, 5)
-path.stroke({
-  color: '#000000',
-  width: 1,
-  linecap: 'round',
-  linejoin: 'round'
-})
 
      </script>
      </div>
+     
+                 <!-- <a href="images/line.png" width="20px" height="100px" /></a> -->
+
   </body>
 </html>
