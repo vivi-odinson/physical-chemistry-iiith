@@ -6,8 +6,17 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.7.1/svg.js"></script>
+    <script language="javascript" type="text/javascript" src="jquery.flotactual.js"></script> 
+
+    <script type="text/javascript" src="<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">"></script>
   </head>
-   <body>
+ <body>
+  <!--<p id="polygonsheet"></p>
+  <h1><font color="red">Text </font></h1>
+  <p id="demo1"></p>
+  <h1>Text 2</h1>
+  <p id="demo2"></p>-->
   <div>
      <div id= "polygonsheet"> </div>
       <script>
@@ -21,7 +30,9 @@ var poly = draw.polygon([
 ]).fill('#fffc00').stroke({
   width: 1
 })
+//document.getElementById("sample").innerHTML = "demo";
 
+//var draw=SVG("solvent").size(500,500)
 var poly = draw.polygon([
   [60, 160],
   [90, 160],
@@ -30,7 +41,9 @@ var poly = draw.polygon([
 ]).fill('none').stroke({
   width: 1
 })
+//document.getElementById("solvent").innerHTML = "demo";
 
+//var draw=SVG("bottle").size(500,500)
 var poly = draw.polygon([
   [580, 40],
   [680, 40],
@@ -39,8 +52,10 @@ var poly = draw.polygon([
 ]).fill('none').stroke({
   width: 1
 })
+//document.getElementById("bottle").innerHTML = "demo";
 
-//slanty thing
+
+//ar draw=SVG("slanty").size(500,500)
 var poly = draw.polygon([
   [630, 130], //point one
   [610, 130], //point two
@@ -49,6 +64,8 @@ var poly = draw.polygon([
 ]).fill('none').stroke({
   width: 1
 })
+//document.getElementById("slanty").innerHTML = "demo";
+
 
 //slanty thing's centre line
 var poly = draw.polygon([
@@ -120,34 +137,31 @@ var polyline = draw.polyline([
   [230,80],
   [390,80],
   [410,80]
-  
 ]).fill('none'). stroke({width:1})
 
 var polyline = draw.polyline([
 [390,110],
 [410,80]
-  
 ]).fill('none'). stroke({width:1})
 
 var polyline = draw.polyline([
 [230,75],
 [410,75]
-  
 ]).fill('none'). stroke({width:1})
+
 var polyline = draw.polyline([
 [230,70],
 [410,70]
-  
 ]).fill('none'). stroke({width:1})
+
 var polyline = draw.polyline([
 [230,70],
 [230,80]
-  
 ]).fill('none'). stroke({width:1})
+
 var polyline = draw.polyline([
 [410,70],
 [410,80]
-  
 ]).fill('none'). stroke({width:1})
 
 //var draw = SVG('drawing')
@@ -165,8 +179,7 @@ var polyline = draw.polyline([
 
      </script>
      </div>
-     
-                 <!-- <a href="images/line.png" width="20px" height="100px" /></a> -->
+      <!-- <a href="images/line.png" width="20px" height="100px" /></a> -->
 
   </body>
 </html>
