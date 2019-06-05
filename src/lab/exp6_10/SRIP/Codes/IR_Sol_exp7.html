@@ -12,6 +12,8 @@
      xmlns:xlink="http://www.w3.org/1999/xlink">"></script>
   </head>
  <body>
+
+   
   <!--<p id="polygonsheet"></p>
   <h1><font color="red">Text </font></h1>
   <p id="demo1"></p>
@@ -20,7 +22,7 @@
   <div>
      <div id= "polygonsheet"> </div>
       <script>
-    var draw = SVG("polygonsheet").size(1000, 1000);
+   var draw = SVG("polygonsheet").size(1000, 1000);
 
 var poly = draw.polygon([
   [60, 20],
@@ -30,9 +32,7 @@ var poly = draw.polygon([
 ]).fill('#fffc00').stroke({
   width: 1
 })
-//document.getElementById("sample").innerHTML = "demo";
 
-//var draw=SVG("solvent").size(500,500)
 var poly = draw.polygon([
   [60, 160],
   [90, 160],
@@ -41,9 +41,7 @@ var poly = draw.polygon([
 ]).fill('none').stroke({
   width: 1
 })
-//document.getElementById("solvent").innerHTML = "demo";
 
-//var draw=SVG("bottle").size(500,500)
 var poly = draw.polygon([
   [580, 40],
   [680, 40],
@@ -52,10 +50,8 @@ var poly = draw.polygon([
 ]).fill('none').stroke({
   width: 1
 })
-//document.getElementById("bottle").innerHTML = "demo";
 
-
-//ar draw=SVG("slanty").size(500,500)
+//slanty thing
 var poly = draw.polygon([
   [630, 130], //point one
   [610, 130], //point two
@@ -64,8 +60,6 @@ var poly = draw.polygon([
 ]).fill('none').stroke({
   width: 1
 })
-//document.getElementById("slanty").innerHTML = "demo";
-
 
 //slanty thing's centre line
 var poly = draw.polygon([
@@ -137,32 +131,112 @@ var polyline = draw.polyline([
   [230,80],
   [390,80],
   [410,80]
+  
 ]).fill('none'). stroke({width:1})
 
 var polyline = draw.polyline([
 [390,110],
 [410,80]
+  
 ]).fill('none'). stroke({width:1})
 
 var polyline = draw.polyline([
 [230,75],
 [410,75]
+  
 ]).fill('none'). stroke({width:1})
-
 var polyline = draw.polyline([
 [230,70],
 [410,70]
+  
 ]).fill('none'). stroke({width:1})
-
 var polyline = draw.polyline([
 [230,70],
 [230,80]
+  
 ]).fill('none'). stroke({width:1})
-
 var polyline = draw.polyline([
 [410,70],
 [410,80]
+  
 ]).fill('none'). stroke({width:1})
+//big base box
+var poly = draw.polygon([
+  [240, 410],
+  [100, 410],
+  [100, 430],
+  [240, 430]
+]).fill('none').stroke({
+  width: 1
+})
+//big base box continuation.
+var poly = draw.polygon([
+  [270, 410],
+  [306, 410],
+  [310, 430],
+  [270, 430]
+]).fill('none').stroke({
+  width: 1
+})
+//narrow box beneath big base box
+var poly = draw.polygon([
+  [310, 430],
+  [105, 430],
+  [105, 440],
+  [310, 440]
+]).fill('#C0C0C0').stroke({
+  width: 1
+})
+//left edge to top narrow box
+var poly = draw.polygon([
+  [100, 410],
+  [110, 340]
+]).fill('none').stroke({
+  width: 1
+})
+//top narrow base box
+var poly = draw.polygon([
+  [291, 340],
+  [108, 340],
+  [110, 350],
+  [292, 350]
+]).fill('none').stroke({
+  width: 1
+})
+//left end top edge 
+var poly = draw.polygon([
+  [291, 340],
+  [310, 430]
+]).fill('none').stroke({
+  width: 1
+})
+
+//right end top edge 
+var poly = draw.polygon([
+  [290, 340],
+  [280, 327]
+]).fill('none').stroke({
+  width: 1
+})
+//left end top edge 
+var poly = draw.polygon([
+  [110, 340],
+  [120, 327]
+]).fill('none').stroke({
+  width: 1
+})
+//big base middle box:
+//big base left edge
+var poly = draw.polygon([
+  [240, 410],
+  [225, 350]
+]).fill('none').stroke({
+  width: 0.3
+})
+
+
+
+
 
 //var draw = SVG('drawing')
 
