@@ -20,11 +20,7 @@
   <h1>Text 2</h1>
   <p id="demo2"></p>-->
   
-  <circle width="100" height="100" r="10" cx="150" cy="290"/>
-
-
-
-  <div>
+    <div>
      <div id= "polygonsheet"> </div>
       <script>
    var draw = SVG("polygonsheet").size(1000, 1000);
@@ -355,6 +351,7 @@ var poly = draw.polygon([
 ]).fill('none').stroke({
   width: 1
 })
+var rect = draw.circle(25).fill('#8B0000').move(510, 130)
 
 
 //black box
@@ -411,6 +408,81 @@ var poly = draw.polygon([
 ]).fill('#808080').stroke({
   width: 0.6
 })
+//Button1
+var poly = draw.polygon([
+  [40, 485],
+  [100, 485],
+  [100, 520],
+  [40, 520]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+var poly = draw.polygon([
+  [40, 485],
+  [30,475]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+var poly = draw.polygon([
+  [100, 485],
+  [110,475]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+var poly = draw.polygon([
+  [40, 520],
+  [30,530]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+var poly = draw.polygon([
+  [100, 520],
+  [110,530]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+var poly = draw.polygon([
+  [110, 475],
+  [110,530]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+var poly = draw.polygon([
+  [30,530],
+  [30,475]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+var poly = draw.polygon([
+  [30,530],
+  [110,530]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+var poly = draw.polygon([
+  [30,475],
+  [110,475]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+
+//Button2
+var poly = draw.polygon([
+  [320, 485],
+  [380, 485],
+  [380, 520],
+  [320, 520]
+  ]).fill('#ffffff').stroke({
+  width: 1
+})
+  var poly = draw.polygon([
+  [30,475],
+  [110,475]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+
+
 var text = draw.text('Sample')
 text.move(50,110).font({ fill: '#000000', family: 'Inconsolata' })
 var text = draw.text('Solvent')
@@ -427,6 +499,9 @@ var text = draw.text('Sample')
 text.move(650,225).font({ fill: '#000000', family: 'Inconsolata' })
 var text = draw.text('Detector')
 text.move(650,255).font({ fill: '#000000', family: 'Inconsolata' })
+var text = draw.text('IR Source')
+text.move(500,100).font({ fill: '#000000', family: 'Inconsolata' })
+
 </script>
 </div>
 
