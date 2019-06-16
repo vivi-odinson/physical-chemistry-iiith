@@ -19,11 +19,23 @@
   <p id="demo1"></p>
   <h1>Text 2</h1>
   <p id="demo2"></p>-->
+
+  <style> 
+{
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+</style>
+
   
     <div>
      <div id= "polygonsheet"> </div>
       <script>
    var draw = SVG("polygonsheet").size(1000, 1000);
+
 
 var poly = draw.polygon([
   [60, 20],
@@ -548,14 +560,17 @@ text.move(50,490).font({ fill: '#000000', family: 'Inconsolata' })
 var text = draw.text('Evaluate')
 text.move(323,490).font({ fill: '#000000', family: 'garamond' })
 
+
+
 </script>
 </div>
 
+  <div>
+    
+    <img src="../photos/_dotted-devider.png" style="top: 650px; right: 600px; height: 200px; width: 4px;">
 
-    <div>
-      <section>
-        <img src="photos/img10.jpg" height="100px" width="50px">
-      </section>
-</div>
+  </div>
+     
+
   </body>
 </html>
