@@ -133,7 +133,7 @@ var poly = draw.polygon([
 ]).fill('none').stroke({
   width: 1
 })
-
+//IR-Cell
 var polyline = draw.polyline([
  [370, 110],
   [360,120],
@@ -173,193 +173,221 @@ var polyline = draw.polyline([
 [410,80]
   
 ]).fill('none'). stroke({width:1})
+
+//button box
+var poly = draw.polygon([
+  [430, 160],
+  [150, 160],
+  [150, 300],
+  [430,300]
+]).fill('#ffffff').stroke({
+  width: 1
+})
+//small button 1
+var poly = draw.polygon([
+  [370, 170],
+  [200, 170],
+  [200, 190],
+  [370,190]
+]).fill('#ffff66').stroke({
+  width: 1
+})
+//small button 2
+var poly = draw.polygon([
+  [370, 200],
+  [200, 200],
+  [200, 220],
+  [370,220]
+]).fill('#ff0000').stroke({
+  width: 1
+})
 //big base box
 var poly = draw.polygon([
-  [240, 410],
-  [100, 410],
+  [240, 430],
   [100, 430],
-  [240, 430]
+  [100, 450],
+  [240, 450]
 ]).fill('none').stroke({
   width: 1
 })
 //big base box continuation.
 var poly = draw.polygon([
-  [270, 410],
-  [306, 410],
-  [310, 430],
-  [270, 430]
+  [270, 430],
+  [306, 430],
+  [310, 450],
+  [270, 450]
 ]).fill('none').stroke({
   width: 1
 })
 //narrow box beneath big base box
 var poly = draw.polygon([
-  [310, 430],
-  [105, 430],
-  [105, 440],
-  [310, 440]
+  [310, 450],
+  [105, 450],
+  [105, 460],
+  [310, 460]
 ]).fill('#C0C0C0').stroke({
   width: 1
 })
 //left edge to top narrow box
 var poly = draw.polygon([
-  [100, 410],
-  [110, 340]
+  [100, 430],
+  [110, 360]
 ]).fill('none').stroke({
   width: 1
 })
 //top narrow base box
 var poly = draw.polygon([
-  [291, 340],
-  [108, 340],
-  [110, 350],
-  [292, 350]
+  [291, 360],
+  [108, 360],
+  [110, 370],
+  [292, 370]
 ]).fill('none').stroke({
   width: 1
 })
 //left end top edge 
 var poly = draw.polygon([
-  [291, 340],
-  [310, 430]
+  [291, 360],
+  [310, 460]
 ]).fill('none').stroke({
   width: 1
 })
 
 //right end top edge 
 var poly = draw.polygon([
-  [290, 340],
-  [280, 325]
+  [290, 360],
+  [280, 345]
 ]).fill('none').stroke({
   width: 1
 })
 //left end top edge 
 var poly = draw.polygon([
-  [110, 340],
-  [120, 327]
+  [110, 360],
+  [120, 347]
 ]).fill('none').stroke({
   width: 1
 })
 //left end top edge 
 var poly = draw.polygon([
-  [110, 340],
-  [120, 327]
+  [110, 360],
+  [120, 347]
 ]).fill('none').stroke({
   width: 1
 })
 //big base middle box:
 //big base left edge
 var poly = draw.polygon([
-  [240, 410],
-  [225, 350]
+  [240, 430],
+  [225, 370]
 ]).fill('none').stroke({
   width: 0.3
 })
 //big base right edge
 var poly = draw.polygon([
-  [270, 425],
-  [260, 350]
+  [270, 445],
+  [260, 370]
 ]).fill('none').stroke({
   width: 0.3
 })
 //bottom most box
 var poly = draw.polygon([
-  [305, 440],
-  [109, 440],
-  [109, 443],
-  [305, 443]
+  [305, 460],
+  [109, 460],
+  [109, 463],
+  [305, 463]
 ]).fill('#000000').stroke({
   width: 1
 })
 //small section top edge 
 var poly = draw.polygon([
-  [120, 327],
-  [160, 327]
+  [120, 347],
+  [160, 347]
 ]).fill('none').stroke({
   width: 1
 })
 //top inner finish-small line
 var poly = draw.polygon([
-  [160, 327],
-  [162,325]
+  [160, 347],
+  [162,345]
 ]).fill('none').stroke({
   width: 1
 })
 //top inner finish-big line
 var poly = draw.polygon([
-  [280, 325],
-  [162,325]
+  [280, 345],
+  [162,345]
 ]).fill('#ffffff').stroke({
   width: 1
 })
 //top-most left vertical finish-big line
 var poly = draw.polygon([
-  [162,325],
-  [162,315]
+  [162,345],
+  [162,335]
 ]).fill('none').stroke({
   width: 1
 })
 //2nd top-most horizontal finish-big line
 var poly = draw.polygon([
-  [162,315],
-  [280,315]
+  [162,335],
+  [280,335]
 ]).fill('#ffffff').stroke({
   width: 1
 })
 //top-most right vertical finish-big line
 var poly = draw.polygon([
-  [280,315],
-  [280,325]
+  [280,335],
+  [280,345]
 ]).fill('none').stroke({
   width: 1
 })
 //top-most vertical line(left)
 var poly = draw.polygon([
-  [167,310],
-  [162,315]
+  [167,330],
+  [162,335]
 ]).fill('none').stroke({
   width: 1
 })
 //top-most horizontal finish-big line
 var poly = draw.polygon([
-  [167,310],
-  [277,310]
+  [167,330],
+  [277,330]
 ]).fill('#ffffff').stroke({
   width: 1
 })
 //top-most vertical line(right)
 var poly = draw.polygon([
-  [277,310],
-  [280,315]
+  [277,330],
+  [280,335]
 ]).fill('none').stroke({
   width: 1
 })
 //white bars
 var poly = draw.polygon([
-  [270,315],
-  [270,325]
+  [270,335],
+  [270,345]
 ]).fill('none').stroke({
   width: 1
 })
 var poly = draw.polygon([
-  [260,315],
-  [260,325]
+  [260,335],
+  [260,345]
 ]).fill('none').stroke({
   width: 1
 })
 var poly = draw.polygon([
-  [254,315],
-  [254,325]
+  [254,335],
+  [254,345]
 ]).fill('none').stroke({
   width: 1
 })
 var poly = draw.polygon([
-  [271,315],
-  [271,325]
+  [271,335],
+  [271,345]
 ]).fill('none').stroke({
   width: 1
 })
 var poly = draw.polygon([
-  [261,315],
-  [261,325]
+  [261,335],
+  [261,345]
 ]).fill('none').stroke({
   width: 1
 })
@@ -368,54 +396,54 @@ var rect = draw.circle(25).fill('#8B0000').move(510, 130)
 
 //black box
 var poly = draw.polygon([
-  [280, 325],
-  [162,325],
-   [162,315],
-   [280,315]
+  [280, 345],
+  [162,345],
+   [162,335],
+   [280,335]
 ]).fill('#000000').stroke({
   width: 1
 })
 
 var poly = draw.polygon([
-  [232, 380],
-  [265,380]
+  [232, 400],
+  [265,400]
 ]).fill('#000000').stroke({
   width: 0.2
 })
 
 //BOX ABOVE PRESS BOX
 var poly = draw.polygon([
-  [240, 410],
-  [270, 410],
-  [270, 417],
-  [240, 417]
+  [240, 430],
+  [270, 430],
+  [270, 437],
+  [240, 437]
 ]).fill('none').stroke({
   width: 0.4
 })
 //PRESS BOX
 var poly = draw.polygon([
-  [240, 410],
-  [270, 410],
+  [240, 430],
   [270, 430],
-  [240, 430]
+  [270, 460],
+  [240, 460]
 ]).fill('none').stroke({
   width: 0.2
 })
 //small section top edge-build 
 var poly = draw.polygon([
-  [120, 327],
-  [160, 327],
-  [163,320],
-  [125,320]
+  [120, 347],
+  [160, 347],
+  [163,340],
+  [125,340]
 ]).fill('#808080').stroke({
   width: 1
 })
 //top-most horizontal finish-big BOX
 var poly = draw.polygon([
-  [167,310],
-  [277,310],
-  [167,315],
-  [277,315]
+  [167,330],
+  [277,330],
+  [167,335],
+  [277,335]
 
 ]).fill('#808080').stroke({
   width: 0.6
@@ -543,6 +571,12 @@ var text = draw.text('Solvent')
 text.move(160,130).font({ fill: '#000000', family: 'Inconsolata' })
 var text = draw.text('Desiccator/IR-Cell')
 text.move(240,130).font({ fill: '#000000', family: 'Inconsolata' })
+var text = draw.text('2-methyl benzoic acid')
+text.move(210,170).font({ fill: '#000000', family: 'garamond' })
+var text = draw.text('2-nitrophenol')
+text.move(210,200).font({ fill: '#ffffff', family: 'Inconsolata' })
+var text = draw.text('Select any sample')
+text.move(200,230).font({ fill: '#000000', family: 'Inconsolata' })
 var text = draw.text('Sample Bottle')
 text.move(40,230).font({ fill: '#000000', family: 'Inconsolata' })
 var text = draw.text('Fixed Mirror')
