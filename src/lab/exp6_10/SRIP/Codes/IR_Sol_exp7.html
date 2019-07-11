@@ -2,609 +2,592 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>IR_Sol_exp7</title>
-    <link href="layout.css" rel="stylesheet" type="text/css"></link>
+    
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.js"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css"></link>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.7.1/svg.js"></script>
     <script language="javascript" type="text/javascript" src="jquery.flotactual.js"></script> 
-
-    <script type="text/javascript" src="<svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">"></script>
   </head>
  <body>
-
-   
-  <!--<p id="polygonsheet"></p>
-  <h1><font color="red">Text </font></h1>
-  <p id="demo1"></p>
-  <h1>Text 2</h1>
-  <p id="demo2"></p>-->
-
-  <style> 
-{
-  border-radius: 25px;
-  background: #ffffff;
-  padding: 20px; 
-  width: 200px;
-  height: 150px;  
-}
-</style>
-
-  
     <div>
      <div id= "polygonsheet"> </div>
       <script>
-   var draw = SVG("polygonsheet").size(1000, 1000);
+      var draw = SVG("polygonsheet").size(1000, 1000);
+      var poly = draw.polygon([
+        [60, 20],
+        [100, 20],
+        [100, 100],
+        [60, 100]
+      ]).fill('#fffc00').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [60, 160],
+        [90, 160],
+        [90, 225],
+        [60, 225]
+      ]).fill('#fffc00').stroke({
+        width: 1
+        })
+      //<animate
+        //attributeName="fill"
+        //dur="50000ms" to="fffc00"
+        //fill="freeze">
 
+      var poly = draw.polygon([
+        [580, 40],
+        [680, 40],
+        [680, 25],
+        [580, 25]
+      ]).fill('none').stroke({
+        width: 1
+      })
 
-var poly = draw.polygon([
-  [60, 20],
-  [100, 20],
-  [100, 100],
-  [60, 100]
-]).fill('#fffc00').stroke({
-  width: 1
-})
+      //slanty thing
+      var poly = draw.polygon([
+        [630, 130], //point one
+        [610, 130], //point two
+        [610, 180], //point three
+        [630, 180]  //point four
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //slanty thing's centre line
+      var poly = draw.polygon([
+        [620, 130],
+        [620, 180]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //box below slanty box
+      var poly = draw.polygon([
+        [635, 230], //point one
+        [600, 230], //point two
+        [600, 240], //point three
+        [635, 240]  //point four
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //detector
+      var poly = draw.polygon([
+        [635, 280], //point one
+        [600, 280], //point two
+        [600, 250], //point three
+        [635, 250]  //point four
+      ]).fill('none').stroke({
+        width: 1
+      })
 
-var poly = draw.polygon([
-  [60, 160],
-  [90, 160],
-  [90, 225],
-  [60, 225]
-]).fill('none').stroke({
-  width: 1
-})
+      var poly = draw.polygon([
+        [800, 120],
+        [950, 120]
+      ]).fill('none').stroke({
+        width: 0.8
+      })
 
-var poly = draw.polygon([
-  [580, 40],
-  [680, 40],
-  [680, 25],
-  [580, 25]
-]).fill('none').stroke({
-  width: 1
-})
+      var poly = draw.polygon([
+        [800, 200],
+        [950, 200]
+      ]).fill('none').stroke({
+        width: 1
+      })
 
-//slanty thing
-var poly = draw.polygon([
-  [630, 130], //point one
-  [610, 130], //point two
-  [610, 180], //point three
-  [630, 180]  //point four
-]).fill('none').stroke({
-  width: 1
-})
+      var poly = draw.polygon([
+        [870, 110], //point one
+        [910, 110], //point two
+        [910, 210], //point three
+        [870, 210]  //point four
+      ]).fill('none').opacity({}).stroke({
+        width: 1
+      })
 
-//slanty thing's centre line
-var poly = draw.polygon([
-  [620, 130],
-  [620, 180]
-]).fill('none').stroke({
-  width: 1
-})
+      var poly = draw.polygon([
+        [150, 20],
+        [220, 20],
+        [220, 130],
+        [150, 130]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //IR-Cell
+      var polyline = draw.polyline([
+       [370, 110],
+        [360,120],
+        [280, 120],
+        [270,110],
+        [390, 110],
+        [250,110],
+        [230,80],
+        [390,80],
+        [410,80]
+        
+      ]).fill('none'). stroke({width:1})
 
-//box below slanty box
-var poly = draw.polygon([
-  [635, 230], //point one
-  [600, 230], //point two
-  [600, 240], //point three
-  [635, 240]  //point four
-]).fill('none').stroke({
-  width: 1
-})
+      var polyline = draw.polyline([
+      [390,110],
+      [410,80]
+        
+      ]).fill('none'). stroke({width:1})
 
-//detector
-var poly = draw.polygon([
-  [635, 280], //point one
-  [600, 280], //point two
-  [600, 250], //point three
-  [635, 250]  //point four
-]).fill('none').stroke({
-  width: 1
-})
+      var polyline = draw.polyline([
+      [230,75],
+      [410,75]
+        
+      ]).fill('none'). stroke({width:1})
+      var polyline = draw.polyline([
+      [230,70],
+      [410,70]
+        
+      ]).fill('none'). stroke({width:1})
+      var polyline = draw.polyline([
+      [230,70],
+      [230,80]
+        
+      ]).fill('none'). stroke({width:1})
+      var polyline = draw.polyline([
+      [410,70],
+      [410,80]
+        
+      ]).fill('none'). stroke({width:1})
 
-var poly = draw.polygon([
-  [800, 120],
-  [950, 120]
-]).fill('none').stroke({
-  width: 0.8
-})
+      //button box
+      var poly = draw.polygon([
+        [430, 160],
+        [150, 160],
+        [150, 300],
+        [430,300]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
 
-var poly = draw.polygon([
-  [800, 200],
-  [950, 200]
-]).fill('none').stroke({
-  width: 1
-})
+      //small button 1
+      function FunctionName(parameters){
+ var poly = draw.polygon([
+        [370, 170],
+        [200, 170],
+        [200, 190],
+        [370,190]
+      ]).fill('#ffff66').stroke({
+        width: 1
+      });
+}
+      
+      //small button 2
+      var poly = draw.polygon([
+        [370, 200],
+        [200, 200],
+        [200, 220],
+        [370,220]
+      ]).fill('#ff0000').stroke({
+        width: 1
+      })
+      //big base box
+      var poly = draw.polygon([
+        [240, 430],
+        [100, 430],
+        [100, 450],
+        [240, 450]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //big base box continuation.
+      var poly = draw.polygon([
+        [270, 430],
+        [306, 430],
+        [310, 450],
+        [270, 450]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //narrow box beneath big base box
+      var poly = draw.polygon([
+        [310, 450],
+        [105, 450],
+        [105, 460],
+        [310, 460]
+      ]).fill('#C0C0C0').stroke({
+        width: 1
+      })
+      //left edge to top narrow box
+      var poly = draw.polygon([
+        [100, 430],
+        [110, 360]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //top narrow base box
+      var poly = draw.polygon([
+        [291, 360],
+        [108, 360],
+        [110, 370],
+        [292, 370]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //left end top edge 
+      var poly = draw.polygon([
+        [291, 360],
+        [310, 460]
+      ]).fill('none').stroke({
+        width: 1
+      })
 
-var poly = draw.polygon([
-  [870, 110], //point one
-  [910, 110], //point two
-  [910, 210], //point three
-  [870, 210]  //point four
-]).fill('none').opacity({}).stroke({
-  width: 1
-})
+      //right end top edge 
+      var poly = draw.polygon([
+        [290, 360],
+        [280, 345]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //left end top edge 
+      var poly = draw.polygon([
+        [110, 360],
+        [120, 347]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //left end top edge 
+      var poly = draw.polygon([
+        [110, 360],
+        [120, 347]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //big base middle box:
+      //big base left edge
+      var poly = draw.polygon([
+        [240, 430],
+        [225, 370]
+      ]).fill('none').stroke({
+        width: 0.3
+      })
+      //big base right edge
+      var poly = draw.polygon([
+        [270, 445],
+        [260, 370]
+      ]).fill('none').stroke({
+        width: 0.3
+      })
+      //bottom most box
+      var poly = draw.polygon([
+        [305, 460],
+        [109, 460],
+        [109, 463],
+        [305, 463]
+      ]).fill('#000000').stroke({
+        width: 1
+      })
+      //small section top edge 
+      var poly = draw.polygon([
+        [120, 347],
+        [160, 347]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //top inner finish-small line
+      var poly = draw.polygon([
+        [160, 347],
+        [162,345]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //top inner finish-big line
+      var poly = draw.polygon([
+        [280, 345],
+        [162,345]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      //top-most left vertical finish-big line
+      var poly = draw.polygon([
+        [162,345],
+        [162,335]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //2nd top-most horizontal finish-big line
+      var poly = draw.polygon([
+        [162,335],
+        [280,335]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      //top-most right vertical finish-big line
+      var poly = draw.polygon([
+        [280,335],
+        [280,345]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //top-most vertical line(left)
+      var poly = draw.polygon([
+        [167,330],
+        [162,335]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //top-most horizontal finish-big line
+      var poly = draw.polygon([
+        [167,330],
+        [277,330]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      //top-most vertical line(right)
+      var poly = draw.polygon([
+        [277,330],
+        [280,335]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      //white bars
+      var poly = draw.polygon([
+        [270,335],
+        [270,345]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [260,335],
+        [260,345]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [254,335],
+        [254,345]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [271,335],
+        [271,345]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [261,335],
+        [261,345]
+      ]).fill('none').stroke({
+        width: 1
+      })
+      var rect = draw.circle(25).fill('#8B0000').move(510, 130)
+      //black box
+      var poly = draw.polygon([
+        [280, 345],
+        [162,345],
+         [162,335],
+         [280,335]
+      ]).fill('#000000').stroke({
+        width: 1
+      })
 
-var poly = draw.polygon([
-  [150, 20],
-  [220, 20],
-  [220, 130],
-  [150, 130]
-]).fill('none').stroke({
-  width: 1
-})
-//IR-Cell
-var polyline = draw.polyline([
- [370, 110],
-  [360,120],
-  [280, 120],
-  [270,110],
-  [390, 110],
-  [250,110],
-  [230,80],
-  [390,80],
-  [410,80]
-  
-]).fill('none'). stroke({width:1})
+      var poly = draw.polygon([
+        [232, 400],
+        [265,400]
+      ]).fill('#000000').stroke({
+        width: 0.2
+      })
 
-var polyline = draw.polyline([
-[390,110],
-[410,80]
-  
-]).fill('none'). stroke({width:1})
+      //BOX ABOVE PRESS BOX
+      var poly = draw.polygon([
+        [240, 430],
+        [270, 430],
+        [270, 437],
+        [240, 437]
+      ]).fill('none').stroke({
+        width: 0.4
+      })
+      //PRESS BOX
+      var poly = draw.polygon([
+        [240, 430],
+        [270, 430],
+        [270, 460],
+        [240, 460]
+      ]).fill('none').stroke({
+        width: 0.2
+      })
+      //small section top edge-build 
+      var poly = draw.polygon([
+        [120, 347],
+        [160, 347],
+        [163,340],
+        [125,340]
+      ]).fill('#808080').stroke({
+        width: 1
+      })
+      //top-most horizontal finish-big BOX
+      var poly = draw.polygon([
+        [167,330],
+        [277,330],
+        [167,335],
+        [277,335]
 
-var polyline = draw.polyline([
-[230,75],
-[410,75]
-  
-]).fill('none'). stroke({width:1})
-var polyline = draw.polyline([
-[230,70],
-[410,70]
-  
-]).fill('none'). stroke({width:1})
-var polyline = draw.polyline([
-[230,70],
-[230,80]
-  
-]).fill('none'). stroke({width:1})
-var polyline = draw.polyline([
-[410,70],
-[410,80]
-  
-]).fill('none'). stroke({width:1})
+      ]).fill('#808080').stroke({
+        width: 0.6
+      })
+      //Button1
+      var poly = draw.polygon([
+        [40, 485],
+        [100, 485],
+        [100, 520],
+        [40, 520]
+      ]).fill('#add8e6').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [40, 485],
+        [30,475]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [100, 485],
+        [110,475]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [40, 520],
+        [30,530]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [100, 520],
+        [110,530]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [110, 475],
+        [110,530]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [30,530],
+        [30,475]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [30,530],
+        [110,530]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [30,475],
+        [110,475]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
 
-//button box
-var poly = draw.polygon([
-  [430, 160],
-  [150, 160],
-  [150, 300],
-  [430,300]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-//small button 1
-var poly = draw.polygon([
-  [370, 170],
-  [200, 170],
-  [200, 190],
-  [370,190]
-]).fill('#ffff66').stroke({
-  width: 1
-})
-//small button 2
-var poly = draw.polygon([
-  [370, 200],
-  [200, 200],
-  [200, 220],
-  [370,220]
-]).fill('#ff0000').stroke({
-  width: 1
-})
-//big base box
-var poly = draw.polygon([
-  [240, 430],
-  [100, 430],
-  [100, 450],
-  [240, 450]
-]).fill('none').stroke({
-  width: 1
-})
-//big base box continuation.
-var poly = draw.polygon([
-  [270, 430],
-  [306, 430],
-  [310, 450],
-  [270, 450]
-]).fill('none').stroke({
-  width: 1
-})
-//narrow box beneath big base box
-var poly = draw.polygon([
-  [310, 450],
-  [105, 450],
-  [105, 460],
-  [310, 460]
-]).fill('#C0C0C0').stroke({
-  width: 1
-})
-//left edge to top narrow box
-var poly = draw.polygon([
-  [100, 430],
-  [110, 360]
-]).fill('none').stroke({
-  width: 1
-})
-//top narrow base box
-var poly = draw.polygon([
-  [291, 360],
-  [108, 360],
-  [110, 370],
-  [292, 370]
-]).fill('none').stroke({
-  width: 1
-})
-//left end top edge 
-var poly = draw.polygon([
-  [291, 360],
-  [310, 460]
-]).fill('none').stroke({
-  width: 1
-})
-
-//right end top edge 
-var poly = draw.polygon([
-  [290, 360],
-  [280, 345]
-]).fill('none').stroke({
-  width: 1
-})
-//left end top edge 
-var poly = draw.polygon([
-  [110, 360],
-  [120, 347]
-]).fill('none').stroke({
-  width: 1
-})
-//left end top edge 
-var poly = draw.polygon([
-  [110, 360],
-  [120, 347]
-]).fill('none').stroke({
-  width: 1
-})
-//big base middle box:
-//big base left edge
-var poly = draw.polygon([
-  [240, 430],
-  [225, 370]
-]).fill('none').stroke({
-  width: 0.3
-})
-//big base right edge
-var poly = draw.polygon([
-  [270, 445],
-  [260, 370]
-]).fill('none').stroke({
-  width: 0.3
-})
-//bottom most box
-var poly = draw.polygon([
-  [305, 460],
-  [109, 460],
-  [109, 463],
-  [305, 463]
-]).fill('#000000').stroke({
-  width: 1
-})
-//small section top edge 
-var poly = draw.polygon([
-  [120, 347],
-  [160, 347]
-]).fill('none').stroke({
-  width: 1
-})
-//top inner finish-small line
-var poly = draw.polygon([
-  [160, 347],
-  [162,345]
-]).fill('none').stroke({
-  width: 1
-})
-//top inner finish-big line
-var poly = draw.polygon([
-  [280, 345],
-  [162,345]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-//top-most left vertical finish-big line
-var poly = draw.polygon([
-  [162,345],
-  [162,335]
-]).fill('none').stroke({
-  width: 1
-})
-//2nd top-most horizontal finish-big line
-var poly = draw.polygon([
-  [162,335],
-  [280,335]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-//top-most right vertical finish-big line
-var poly = draw.polygon([
-  [280,335],
-  [280,345]
-]).fill('none').stroke({
-  width: 1
-})
-//top-most vertical line(left)
-var poly = draw.polygon([
-  [167,330],
-  [162,335]
-]).fill('none').stroke({
-  width: 1
-})
-//top-most horizontal finish-big line
-var poly = draw.polygon([
-  [167,330],
-  [277,330]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-//top-most vertical line(right)
-var poly = draw.polygon([
-  [277,330],
-  [280,335]
-]).fill('none').stroke({
-  width: 1
-})
-//white bars
-var poly = draw.polygon([
-  [270,335],
-  [270,345]
-]).fill('none').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [260,335],
-  [260,345]
-]).fill('none').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [254,335],
-  [254,345]
-]).fill('none').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [271,335],
-  [271,345]
-]).fill('none').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [261,335],
-  [261,345]
-]).fill('none').stroke({
-  width: 1
-})
-var rect = draw.circle(25).fill('#8B0000').move(510, 130)
-
-
-//black box
-var poly = draw.polygon([
-  [280, 345],
-  [162,345],
-   [162,335],
-   [280,335]
-]).fill('#000000').stroke({
-  width: 1
-})
-
-var poly = draw.polygon([
-  [232, 400],
-  [265,400]
-]).fill('#000000').stroke({
-  width: 0.2
-})
-
-//BOX ABOVE PRESS BOX
-var poly = draw.polygon([
-  [240, 430],
-  [270, 430],
-  [270, 437],
-  [240, 437]
-]).fill('none').stroke({
-  width: 0.4
-})
-//PRESS BOX
-var poly = draw.polygon([
-  [240, 430],
-  [270, 430],
-  [270, 460],
-  [240, 460]
-]).fill('none').stroke({
-  width: 0.2
-})
-//small section top edge-build 
-var poly = draw.polygon([
-  [120, 347],
-  [160, 347],
-  [163,340],
-  [125,340]
-]).fill('#808080').stroke({
-  width: 1
-})
-//top-most horizontal finish-big BOX
-var poly = draw.polygon([
-  [167,330],
-  [277,330],
-  [167,335],
-  [277,335]
-
-]).fill('#808080').stroke({
-  width: 0.6
-})
-//Button1
-var poly = draw.polygon([
-  [40, 485],
-  [100, 485],
-  [100, 520],
-  [40, 520]
-]).fill('#add8e6').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [40, 485],
-  [30,475]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [100, 485],
-  [110,475]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [40, 520],
-  [30,530]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [100, 520],
-  [110,530]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [110, 475],
-  [110,530]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [30,530],
-  [30,475]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [30,530],
-  [110,530]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [30,475],
-  [110,475]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-
-//Button2
-var poly = draw.polygon([
-  [320, 485],
-  [380, 485],
-  [380, 520],
-  [320, 520]
-  ]).fill('#add8e6').stroke({
-  width: 1
-})
-  var poly = draw.polygon([
-  [315,475],
-  [320,485]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-  var poly = draw.polygon([
-  [385,475],
-  [380,485]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [320,520],
-  [310,530]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [380,520],
-  [390,530]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [390,530],
-  [390,475]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [390, 530],
-  [310,530]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [390, 475],
-  [310,475]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-var poly = draw.polygon([
-  [310, 530],
-  [310,475]
-]).fill('#ffffff').stroke({
-  width: 1
-})
-
-
-var text = draw.text('Sample')
-text.move(50,110).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('Solvent')
-text.move(160,130).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('Desiccator/IR-Cell')
-text.move(240,130).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('2-methyl benzoic acid')
-text.move(210,170).font({ fill: '#000000', family: 'garamond' })
-var text = draw.text('2-nitrophenol')
-text.move(210,200).font({ fill: '#ffffff', family: 'Inconsolata' })
-var text = draw.text('Select any sample')
-text.move(200,230).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('Sample Bottle')
-text.move(40,230).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('Fixed Mirror')
-text.move(685,20).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('Movable Mirror')
-text.move(820,90).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('Sample')
-text.move(650,225).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('Detector')
-text.move(650,255).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('IR Source')
-text.move(500,100).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('Start')
-text.move(50,490).font({ fill: '#000000', family: 'Inconsolata' })
-var text = draw.text('Evaluate')
-text.move(323,490).font({ fill: '#000000', family: 'garamond' })
-
-
-
+      //Button2
+      var poly = draw.polygon([
+        [320, 485],
+        [380, 485],
+        [380, 520],
+        [320, 520]
+        ]).fill('#add8e6').stroke({
+        width: 1
+      })
+        var poly = draw.polygon([
+        [315,475],
+        [320,485]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+        var poly = draw.polygon([
+        [385,475],
+        [380,485]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [320,520],
+        [310,530]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [380,520],
+        [390,530]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [390,530],
+        [390,475]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [390, 530],
+        [310,530]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [390, 475],
+        [310,475]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var poly = draw.polygon([
+        [310, 530],
+        [310,475]
+      ]).fill('#ffffff').stroke({
+        width: 1
+      })
+      var text = draw.text('Sample')
+      text.move(50,110).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('Solvent')
+      text.move(160,130).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('Desiccator/IR-Cell')
+      text.move(240,130).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('2-methyl benzoic acid')
+      text.move(210,170).font({ fill: '#000000', family: 'garamond' })
+      var text = draw.text('2-nitrophenol')
+      text.move(210,200).font({ fill: '#ffffff', family: 'Inconsolata' })
+      var text = draw.text('Select any sample')
+      text.move(200,230).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('Sample Bottle')
+      text.move(40,230).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('Fixed Mirror')
+      text.move(685,20).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('Movable Mirror')
+      text.move(820,90).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('Sample')
+      text.move(650,225).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('Detector')
+      text.move(650,255).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('IR Source')
+      text.move(500,100).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('Start')
+      text.move(50,490).font({ fill: '#000000', family: 'Inconsolata' })
+      var text = draw.text('Evaluate')
+      text.move(323,490).font({ fill: '#000000', family: 'garamond' })
 </script>
 </div>
+  
+  <p><button onclick="myFunction()">2-Methyl Benzoic Acid</button></p>
+  <div id="but1">Click on the sample to transfer small amount of (2-5)mg of the substance in the empty sample bottle </div>
+  <script>
+    function myFunction()
+    {
+      var x=document.getElementById("but1");
+      if(x.innerHTML==="Click on the sample to transfer small amount of (2-5)mg of the substance in the empty sample bottle ")
+      {
+        x.innerHTML="";
+      }else{
+        x.innerHTML="Click on the sample to transfer small amount of (2-5)mg of the substance in the empty sample bottle ";
 
-  <div>
-    
-    <img src="../photos/_dotted-devider.png" style="top: 650px; right: 600px; height: 200px; width: 4px;">
-
-  </div>
-     
-
+      }
+    }
+  </script>
+  
   </body>
-</html>
+  </html>
