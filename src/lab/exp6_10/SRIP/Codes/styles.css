@@ -1,4 +1,11 @@
-but1 {
-  background-color: green;
+.w3-button {
+  background-color: yellow;
   position: relative;
+  left: 200;
+  bottom: 840;
+}
+
+.div.but1 {
+  position: relative;
+  bottom: 800;
 }
