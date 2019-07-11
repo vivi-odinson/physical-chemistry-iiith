@@ -5,7 +5,6 @@
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.js"></script>
     <link href="styles.css" rel="stylesheet" type="text/css"></link>
-    <link rel="stylesheet" href="w3.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.7.1/svg.js"></script>
     <script language="javascript" type="text/javascript" src="jquery.flotactual.js"></script> 
@@ -28,7 +27,7 @@
         [90, 160],
         [90, 225],
         [60, 225]
-      ]).fill('none').stroke({
+      ]).fill('#fffc00').stroke({
         width: 1
         })
       //<animate
@@ -527,6 +526,7 @@
       text.move(160,130).font({ fill: '#000000', family: 'Inconsolata' })
       var text = draw.text('Desiccator/IR-Cell')
       text.move(240,130).font({ fill: '#000000', family: 'Inconsolata' })
+      
       var text = draw.text('Sample Bottle')
       text.move(40,230).font({ fill: '#000000', family: 'Inconsolata' })
       var text = draw.text('Fixed Mirror')
@@ -545,22 +545,22 @@
       text.move(323,490).font({ fill: '#000000', family: 'garamond' })
 </script>
 </div>
+  
 <p><button class="w3-button w3-black w3-round-small" onclick="myFunction()" >2-Methyl Benzoic Acid</button></p>
 <p><button class="w3-button w3-black w3-round-large" onclick="myFunction()" >2-Nitrophenol</button></p>
-  <div id="div.but1" div>Click on the sample to transfer small amount of (2-5)mg of the substance in the empty sample bottle </div>
+  <div id="div.but1" div>Click on any sample</div>
   <script>
     function myFunction()
     {
-      var x=document.getElementById("but1");
-      if(x.innerHTML==="Click on the sample to transfer small amount of (2-5)mg of the substance in the empty sample bottle ")
+      var x=document.getElementById("div.but1");
+      if(x.innerHTML==="Click on any sample")
       {
         x.innerHTML="";
       }else{
-        x.innerHTML="Click on the sample to transfer small amount of (2-5)mg of the substance in the empty sample bottle ";
+        x.innerHTML="Click on the sample to transfer small amount (2-5mg) of the substance into empty sample bottle";
 
       }
     }
   </script>
   
   </body>
-  </html>
