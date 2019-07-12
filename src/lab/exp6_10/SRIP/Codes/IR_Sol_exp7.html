@@ -5,6 +5,8 @@
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.js"></script>
     <link href="styles.css" rel="stylesheet" type="text/css"></link>
+    <link href="press-2.0.8.css" rel="stylesheet" type="text/css"></link>
+    <link href="w3.css" rel="stylesheet" type="text/css"></link>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.7.1/svg.js"></script>
     <script language="javascript" type="text/javascript" src="jquery.flotactual.js"></script> 
@@ -122,7 +124,7 @@
         [390,80],
         [410,80]
         
-      ]).fill('none'). stroke({width:1})
+      ]).fill('cyan'). stroke({width:1})
 
       var polyline = draw.polyline([
       [390,110],
@@ -151,15 +153,6 @@
         
       ]).fill('none'). stroke({width:1})
 
-      //button box
-      var poly = draw.polygon([
-        [430, 160],
-        [150, 160],
-        [150, 300],
-        [430,300]
-      ]).fill('#ffffff').stroke({
-        width: 1
-      })
       //big base box
       var poly = draw.polygon([
         [240, 430],
@@ -526,7 +519,6 @@
       text.move(160,130).font({ fill: '#000000', family: 'Inconsolata' })
       var text = draw.text('Desiccator/IR-Cell')
       text.move(240,130).font({ fill: '#000000', family: 'Inconsolata' })
-      
       var text = draw.text('Sample Bottle')
       text.move(40,230).font({ fill: '#000000', family: 'Inconsolata' })
       var text = draw.text('Fixed Mirror')
@@ -546,8 +538,9 @@
 </script>
 </div>
   
-<p><button class="w3-button w3-black w3-round-small" onclick="myFunction()" >2-Methyl Benzoic Acid</button></p>
-<p><button class="w3-button w3-black w3-round-large" onclick="myFunction()" >2-Nitrophenol</button></p>
+
+<p><button class="w3-button w3-blue w3-round-small w3-firstbut" onclick="myFunction()" >2-Methyl Benzoic Acid</button></p>
+<p><button class="w3-button w3-orange w3-round-small-secbut" onclick="myFunction()" >2-Nitrophenol</button></p>
   <div id="div.but1" div>Click on any sample</div>
   <script>
     function myFunction()
@@ -558,9 +551,55 @@
         x.innerHTML="";
       }else{
         x.innerHTML="Click on the sample to transfer small amount (2-5mg) of the substance into empty sample bottle";
-
       }
     }
   </script>
+
+<div>
+  <p><button class="press press-yellow" onclick="myFunction()"></button></p>
+  <script>
+  function myFunction()
+  {
+    document.getElementById('').innerHTML="Click on the solvent bottle to transfer 2-3mL of it to the sample to prepare a clear solution";
+  }
+  </script>
+</div>
+
+<div>
+  <p><button class="press press-pink press-but2" onclick="myFunction()"></button></p>
+  <script>
+  function myFunction()
+  {
+    document.getElementById('').innerHTML="Click on the dessicator to take out the Soltuion from IR Cell";
+  }
+  </script>
+</div>
+
+<!--sample bottle-->
+<div>
+  <p><button class="press press-cyan --h press-but3" onclick="myFunction()"></button></p>
+  <script>
+  function myFunction()
+  {
+    document.getElementById('').innerHTML="Click on the sample solution to draw 1mL of the solution with a syringe";
+    document.getElementById('').classList.toggle("show");
+  }
+  </script>
+</div>
+<!--sample bottle-->
+<div>
+  <p><button class="press press-orange press-but4" onclick="myFunction()"></button></p>
+  <script>
+  function myFunction()
+  {
+    document.getElementById('').innerHTML="Click on the solution IR Cell to transfer the sample solution until all the air is expelled from the soltuion cell.";
+  }
+  </script>
+</div>
+
+
   
   </body>
+  </html>
+
+ 
