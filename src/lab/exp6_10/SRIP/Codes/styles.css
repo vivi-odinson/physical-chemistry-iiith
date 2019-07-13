@@ -1,18 +1,19 @@
 .w3-button {
-  
   position: relative;
   left: 700;
   bottom: 650;
   height: 30;
-
-  
-
-.div.but1 {
-  position: relative;
-  bottom: 810;
 }
 
-.butt{
+#div-but1 {
+  position: relative;
+  bottom: 600;
+  left: 700;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20;
+}
+
+.butt {
   position: relative;
   left: 200;
   bottom: 840;
