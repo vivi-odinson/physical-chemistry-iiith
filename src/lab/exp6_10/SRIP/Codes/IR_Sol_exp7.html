@@ -538,10 +538,11 @@
 </script>
 </div>
   
-
+<!--CLICK ONE SAMPLE AND DISPLAY STARTING TEXT-->
 <p><button class="w3-button w3-blue w3-round-small w3-firstbut" onclick="myFunction()" >2-Methyl Benzoic Acid</button></p>
 <p><button class="w3-button w3-orange w3-round-small-secbut" onclick="myFunction()" >2-Nitrophenol</button></p>
-  <section id="div-but1">Click on any sample</div>
+  
+<div id="div-but1">Click on any sample</div>
   <script>
     function myFunction()
     {
@@ -554,53 +555,57 @@
       }
     }
   </script>
-  </section>
 
-  <section>
-    <p><button class="press press-yellow" onclick="myFunction()"></button></p>
-    <script>
-    function myFunction()
-    {
-      document.getElementById('').innerHTML="Click on the solvent bottle to transfer 2-3mL of it to the sample to prepare a clear solution";
-    }
-    </script>
-  </section>
-  
-  <section>
-    <p><button class="press press-pink press-but2" onclick="myFunction()"></button></p>
-    <script>
-    function myFunction()
-    {
-      document.getElementById('').innerHTML="Click on the dessicator to take out the Soltuion from IR Cell";
-    }
-    </script>
-  </section>
-  <!--sample bottle-->
-  <section>
-    <p><button class="press press-cyan --h press-but3" onclick="myFunction()"></button></p>
-    <p><img id="ir-cell" src="ircell.jpg"</p>
-    <script>
-    function myFunction()
-    {
-      document.getElementById('').innerHTML="Click on the sample solution to draw 1mL of the solution with a syringe";
-      document.getElementById('ir-cell').classList.toggle("show");
-    }
-    </script>
-  </section>
-  <!--sample bottle-->
-  <section>
-    <p><button class="press press-orange press-but4" onclick="myFunction()"></button></p>
-    <script>
-    function myFunction()
-    {
-      document.getElementById('').innerHTML="Click on the solution IR Cell to transfer the sample solution until all the air is expelled from the soltuion cell.";
-    }
-    </script>
-  </section>
+   <!--YELLOW SAMPLE BUTTON AND FOLLOWING TEXT-->
+<div>
+  <p><button class="press press-yellow" onclick="myFunction()"></button></p>
+  <script>
+  function myFunction()
+  {
+    document.getElementById('').innerHTML="Click on the solvent bottle to transfer 2-3mL of it to the sample to prepare a clear solution";
+  }
+  </script>
+</div>
+
+ <!--PINK SOLVENT BUTTON AND FOLLOWING TEXT-->
+<div>
+  <p><button class="press press-pink press-but2" onclick="myFunction()"></button></p>
+  <script>
+  function myFunction()
+  {
+    document.getElementById('').innerHTML="Click on the dessicator to take out the Soltuion from IR Cell";
+  }
+  </script>
+</div>
+
+<!--BLACK DESICCATOR BUTTON DISPLAY. SHOW TEXT CHANGE AND DISPLAY IMAGE ON CLICKING-->
+<div>
+  <p><button class="press press-black --h press-but3" onclick="myFunction()"></button></p>
+
+  <p><img id="ir-cell" src="ircell.jpg"</p>
+  <script>
+  function myFunction()
+  {
+    document.getElementById('').innerHTML="Click on the sample solution to draw 1mL of the solution with a syringe";
+    document.getElementById('ir-cell').classList.toggle("hide");
+  }
+  </script>
+</div>
+
+<!--ORANGE SAMPLE BOTTLE SHOULD DISPLAY THAT TEXT ON CLICKING-->
+<p><button class="press press-orange press-but4" onclick="myFunction()"></button></p>
+<script>
+function myFunction()
+{
+  document.getElementById('').innerHTML="Click on the solution IR Cell to transfer the sample solution until all the air is expelled from the soltuion cell.";
+}
+</script>
+</div>
+
+
 
 
   
   </body>
   </html>
 
- 
