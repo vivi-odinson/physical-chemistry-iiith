@@ -539,7 +539,8 @@
 </div>
   
 <!--CLICK ONE SAMPLE AND DISPLAY STARTING TEXT-->
-<div>
+<section>
+  <div>
 <p><button class="w3-button w3-blue w3-round-small w3-firstbut" onclick="myFunction()" >2-Methyl Benzoic Acid</button></p>
 <p><button class="w3-button w3-orange w3-round-small-secbut" onclick="myFunction()" >2-Nitrophenol</button></p>
   
@@ -557,8 +558,11 @@
     }
   </script>
 </div>
+</section>
+
 
    <!--YELLOW SAMPLE BUTTON AND FOLLOWING TEXT-->
+   <section>
 <div>
   <p><button class="press press-yellow" onclick="myFunction()"></button></p>
   <script>
@@ -568,9 +572,12 @@
   }
   </script>
 </div>
+</section>
+
 
  <!--PINK SOLVENT BUTTON AND FOLLOWING TEXT-->
-<div>
+ <section>
+  <div>
   <p><button class="press press-pink press-but2" onclick="myFunction()"></button></p>
   <script>
   function myFunction()
@@ -579,8 +586,11 @@
   }
   </script>
 </div>
+</section>
+
 
 <!--BLACK DESICCATOR BUTTON DISPLAY. SHOW TEXT CHANGE AND DISPLAY IMAGE ON CLICKING-->
+<section>
 <div>
   <p><button class="press press-black --h press-but3" onclick="myFunction()"></button></p>
 
@@ -593,9 +603,11 @@
   }
   </script>
 </div>
+</section>
 
 <!--ORANGE SAMPLE BOTTLE SHOULD DISPLAY THAT TEXT ON CLICKING-->
-<div>
+<section>
+  <div>
 <p><button class="press press-orange press-but4" onclick="myFunction()"></button></p>
 <script>
 function myFunction()
@@ -604,16 +616,40 @@ function myFunction()
 }
 </script>
 </div>
+</section>
 
 <!--START BUTTON-->
+<section>
 <div>
-  <p><button class="press press-raised press-purple press-startbut" >Start</button></p>
+  <p><button class="press press-raised press-purple press-startbut" onclick="myMove()" >Start</button></p>
+  <div id="animate"></div>
   </div>
+  <script>
+  function myMove(){
+    var elem=document.getElementById("animate");
+    var pos=0;
+    var id=setInterval(frame,7);
+    function frame(){
+      if(pos==100){
+        clearInterval(id);
+      } else{
+        pos++;
+        elem.style.left=pos+"px";
+        elem.style.right=pos+"px";
+      }
+      }
+    }
+  }
+  </script>
+</section>
 
-  <!--EVALUATE BUTTON-->
+
+<!--EVALUATE BUTTON-->
+<section>
 <div>
   <p><button class="press press-raised press-purple press-evaluate"><font size="1.9">Evaluate</font></button></p>
 </div>
+</section>
 
 
 
