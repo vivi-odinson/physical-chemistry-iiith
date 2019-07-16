@@ -76,6 +76,47 @@
   text-decoration: none;
   transition: background 0.15s linear;
 }
+
+.press-startbut {
+  box-sizing: border-box;
+  position: relative;
+  left: 40;
+  bottom: 1184;
+  width: 60;
+  height: 35;
+  background-color: var(--p);
+  border: 2px solid var(--p);
+  color: var(--c);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0;
+  padding: 0.5em 0.75em;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.15s linear;
+}
+
+.press-evaluate {
+  box-sizing: border-box;
+  position: relative;
+  left: 320;
+  bottom: 1233;
+  width: 60;
+  height: 33;
+  background-color: var(--p);
+  border: 2px solid var(--p);
+  color: var(--c);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0;
+  padding: 0.5em 0.75em;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.15s linear;
+}
+
 .press-red {
   --p: #f44336;
   --c: #000;
