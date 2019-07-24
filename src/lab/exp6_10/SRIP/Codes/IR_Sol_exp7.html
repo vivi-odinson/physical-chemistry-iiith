@@ -564,7 +564,7 @@
    <!--YELLOW SAMPLE BUTTON AND FOLLOWING TEXT-->
   
 <div>
-  <p><button class="press press-yellow" onclick="myFunction()"></button></p>
+  <p><button class="press press-yellow" onclick="myFunction3()"></button></p>
   <div id="text-one"></div>
   <script type="text/javascript" src="fun3.js"> </script>
 </div>
@@ -574,7 +574,7 @@
  <!--PINK SOLVENT BUTTON AND FOLLOWING TEXT-->
 
  <div>
-    <p><button class="press press-pink press-but2" onclick="myFunction()"></button></p>
+    <p><button class="press press-pink press-but2" onclick="myFunction4()"></button></p>
     <div id="text-one"></div>
     <script type="text/javascript" src="fun4.js"> </script>
   </div>
@@ -583,7 +583,7 @@
 <!--BLACK DESICCATOR BUTTON DISPLAY. SHOW TEXT CHANGE AND DISPLAY IMAGE ON CLICKING-->
 
 <div>
-  <p><button class="press press-black --h press-but3" onclick="myFunction()"></button></p>
+  <p><button class="press press-black --h press-but3" onclick="myFunction5()"></button></p>
 
   <p><img id="ir-cell" src="ircell.jpg"></p>
   <script type="text/javascript" src="fun5.js"> </script>
@@ -591,7 +591,7 @@
 <!--ORANGE SAMPLE BOTTLE SHOULD DISPLAY THAT TEXT ON CLICKING-->
 
   <div>
-<p><button class="press press-orange press-but4" onclick="myFunction3()"></button></p>
+<p><button class="press press-orange press-but4" onclick="myFunction1()"></button></p>
 <script type="text/javascript" src="fun1.js"> </script>
  
 </div>
@@ -601,23 +601,9 @@
 <div>
   <p><button class="press press-raised press-purple press-startbut" onclick="myMove()" >Start</button></p>
   <div id="animate"></div>
+  <script type="text/javascipt" src="myMove.js"></script>
   </div>
-  <script>
-  function myMove(){
-    var elem=document.getElementById("animate");
-    var pos=0;
-    var id=setInterval(frame,7);
-    function frame(){
-      if(pos==100){
-        clearInterval(id);
-      } else{
-        pos++;
-        elem.style.left=pos+"px";
-        elem.style.right=pos+"px";
-      }
-      }
-    }
-  </script>
+  
 
 
 
