@@ -13,9 +13,39 @@
   font-size: 20;
 }
 
-.butt {
+#text-one {
   position: relative;
-  left: 200;
-  bottom: 840;
-  font-size: 1em;
+  bottom: 700;
+  left: 700;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20;
+}
+
+#text-two {
+  position: relative;
+  bottom: 850;
+  left: 700;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20;
+}
+
+#text-three {
+  position: relative;
+  bottom: 920;
+  left: 700;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20;
+}
+
+#text-four {
+  position: relative;
+  top: 900;
+  left: 700;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20;
+}
+#ir-cell {
+  position: relative;
+  bottom: 1260;
+  left: 250;
 }
