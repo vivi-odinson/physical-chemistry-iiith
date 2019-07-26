@@ -2,9 +2,9 @@
 function myMove() {
   var elem = document.getElementById("animate");
   var pos = 0;
-  var id = setInterval(frame, 7);
+  var id = setInterval(frame, 1);
   function frame() {
-    if (pos == 100) {
+    if (pos == 849) {
       clearInterval(id);
     } else {
       pos++;
