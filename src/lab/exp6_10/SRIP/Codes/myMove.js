@@ -1,10 +1,10 @@
 
 function myMove() {
   var elem = document.getElementById("animate");
-  var pos = 0;
-  var id = setInterval(frame, 1);
+  var pos = 500;
+  var id = setInterval(frame, 9);
   function frame() {
-    if (pos == 849) {
+    if (pos == 1) {
       clearInterval(id);
     } else {
       pos++;
@@ -13,3 +13,4 @@ function myMove() {
     }
   }
 }
+
